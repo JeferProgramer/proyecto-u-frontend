@@ -49,26 +49,6 @@ function AdminPanelSidebar() {
             Posts
           </Button>
         </NavLink>
-        <NavLink exact to='/adminpanel/payments'
-          className='sidebarButtons'
-          style={({ isActive }) => ({
-            color: isActive ? '#63caa7' : 'white',
-            background: isActive ? 'white' : '#63caa7',
-          })}>
-          <Button fontSize='xl' height='100%' width='100%' bg='blackAlpha' _hover={{ bg: 'green.100', color: '#63caa7' }}>
-            Historial de pagos
-          </Button>
-        </NavLink>
-        <NavLink exact to='/adminpanel/statistics'
-          className='sidebarButtons'
-          style={({ isActive }) => ({
-            color: isActive ? '#63caa7' : 'white',
-            background: isActive ? 'white' : '#63caa7',
-          })}>
-          <Button fontSize='xl' height='100%' width='100%' bg='blackAlpha' _hover={{ bg: 'green.100', color: '#63caa7' }}>
-            Estadísticas
-          </Button>
-        </NavLink>
       </Stack>
 
     </Container>

@@ -58,7 +58,7 @@ export default function Reviews({ idPsychologist }) {
 
     setUpdatePsycoRating({
       ...updatePsycoRating,
-      Rating: [...userPsichologistDetail.Rating, value] //creo un nuevo rating sumando a los valores previos el actual
+      // Rating: [...userPsichologistDetail.Rating, value] //creo un nuevo rating sumando a los valores previos el actual
     })
   };
 

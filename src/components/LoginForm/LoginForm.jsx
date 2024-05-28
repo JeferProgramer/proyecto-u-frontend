@@ -292,12 +292,6 @@ function LoginForm() {
                     >
                       Iniciar sesión
                     </Button>
-
-                     <a href={`http://localhost:3001/userclient/auth/google`}>
-                      <Button bg='green.100' color='#285e61'>
-                        Inicia sesión con &nbsp;<FaGoogle />
-                      </Button>
-                    </a>
                   </Stack>
 
                   <Stack >

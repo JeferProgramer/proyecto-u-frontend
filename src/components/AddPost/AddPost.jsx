@@ -5,9 +5,9 @@ import { addPost, getCategories, getAllPosts } from "../../redux/actions";
 import NavbarHome from "../NavbarHome/NavbarHome.jsx";
 import Footer from "../Footer/Footer.jsx";
 import './addPost.css';
-import { Select, Button, Textarea, Text, Stack, Box } from '@chakra-ui/react'
+import { Stack, Text, Box, Input, Textarea, Select, Button } from '@chakra-ui/react'
 import Swal from 'sweetalert2';
-import { ArrowLeftIcon } from '@chakra-ui/icons';
+import { ArrowLeftIcon } from "@chakra-ui/icons";
 import NotFound from '../404notFound/notFound.jsx';
 
 function validarCampos(input) {
@@ -137,129 +137,215 @@ export default function AddPost() {
   const tokenPsychologist = window.localStorage.getItem("tokenPsychologist");
 
   return (
+    // <>
+    //   {tokenPsychologist ? (
+    //     <>
+    //       <NavbarHome />
+    //       <Stack direction="column" width="70%" margin="auto" mt="2em" mb="3em">
+    //         <Link to="/blog">
+    //           <Text color="green.300" fontSize="2xl" textAlign="left" mb="1em">
+    //             <ArrowLeftIcon /> Volver
+    //           </Text>
+    //         </Link>
+    //         <form onSubmit={(e) => handleSubmit(e)} className="form">
+    //           <div className="formulario">
+    //             <h2 className="titulo">Crear Nota</h2>
+    //             {/* Titulo */}
+    //             <div className="group">
+    //               <input
+    //                 className="input1"
+    //                 required
+    //                 type={"text"}
+    //                 name="Title"
+    //                 value={input.Title}
+    //                 onChange={(e) => handleChange(e)}
+    //               />
+    //               <span className="bar"></span>
+    //               <label className="etiqueta">Titulo</label>
+    //               {errors.Title && <p className="peligro">{errors.Title}</p>}
+    //             </div>
+    //             {/* fecha */}
+    //             {/* <div className="group"> */}
+    //               {/* controlamos tanto como la fecha y el valor cada vez que haya un cambio */}
+    //               {/* <input
+    //                 className="input1"
+    //                 type={"Date"}
+    //                 required
+    //                 name="Date"
+    //                 value={input.Date}
+    //                 onChange={(e) => handleChange(e)}
+    //               />
+    //               <span className="bar"></span>
+    //               <label className="etiqueta"> Fecha de creacion: </label> */}
+    //               {/* si hay un error mostramos el valor del objete con ese error */}
+    //               {/* {errors.Date && <p className="peligro">{errors.Date}</p>}
+    //             </div> */}
+    //             {/* Imagen */}
+    //             <div className="group">
+    //               <input
+    //                 className="input1"
+    //                 required
+    //                 type={"url"}
+    //                 name="Image"
+    //                 value={input.Image}
+    //                 onChange={(e) => handleChange(e)}
+    //               />
+    //               <span className="bar"></span>
+    //               <label className="etiqueta">Url de la Imagen: </label>
+    //               {errors.Image && <p className="peligro">{errors.Image}</p>}
+    //             </div>
+    //             {/* categorias */}
+    //             <div className="group">
+    //               <Select
+    //                 placeholder="Elija las categorias asociadas a la nota creada"
+    //                 defaultValue={""}
+    //                 onChange={(e) => handleCategories(e)}
+    //                 className="alert"
+    //               >
+    //                 {/* me traigo todos mis generos y los muestro */}
+    //                 {categories &&
+    //                   categories.map((categorie) => {
+    //                     return (
+    //                       <option value={categorie.name}>
+    //                         {categorie.name}
+    //                       </option>
+    //                     );
+    //                   })}
+    //               </Select>
+    //               <span className="bar"></span>
+    //               {/* ahora muestro los generos que ha seleccionado el usuario */}
+    //               <label className="etiqueta">Categorias: </label>
+    //               {input.Tags &&
+    //                 input.Tags.map((tag) => {
+    //                   return (
+    //                     <div className="opcion">
+    //                       <div className="opcion_titulo">{tag}</div>
+    //                       <button
+    //                         className="button_delete"
+    //                         onClick={() => handleDeleteCategory(tag)}
+    //                         value={tag}
+    //                         key={tag}
+    //                       >
+    //                         <span className={"delete"}>X</span>
+    //                       </button>
+    //                     </div>
+    //                   );
+    //                 })}
+    //             </div>
+    //             {errors.Tags && <p className="peligro">{errors.Tags}</p>}
+    //             <div className="group">
+    //               <Textarea
+    //                 cols="90"
+    //                 rows="10"
+    //                 placeholder="Escribe aca el contenido de la nota"
+    //                 requerid
+    //                 type="text"
+    //                 name="Content"
+    //                 value={input.Content}
+    //                 onChange={(e) => handleChange(e)}
+    //               ></Textarea>
+    //               <label className="description">Contenido: </label>
+    //               {errors.Content && (
+    //                 <p className="peligro">{errors.Content}</p>
+    //               )}
+    //             </div>
+    //           </div>
+    //           <div>
+    //             <button className="boton_submit">Crear Nota</button>
+    //           </div>
+    //         </form>
+    //       </Stack>
+    //     </>
+    //   ) : (
+    //     <NotFound />
+    //   )}
+    //   <Footer />
+    // </>
     <>
       {tokenPsychologist ? (
-        <>
-          <NavbarHome />
-          <Stack direction="column" width="70%" margin="auto" mt="2em" mb="3em">
+        <Box>
+          <Box as="nav" mb={8}>
             <Link to="/blog">
-              <Text color="green.300" fontSize="2xl" textAlign="left" mb="1em">
-                <ArrowLeftIcon /> Volver
+              <Text color="green.300" fontSize="2xl" textAlign="left" display="flex" alignItems="center">
+                <ArrowLeftIcon mr={2} /> Volver
               </Text>
             </Link>
-            <form onSubmit={(e) => handleSubmit(e)} className="form">
-              <div className="formulario">
-                <h2 className="titulo">Crear Nota</h2>
+          </Box>
+          <Stack direction="column" maxW="70%" mx="auto" mt={8} mb={12}>
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <Box mb={6}>
+                <Text fontSize="2xl" fontWeight="bold" mb={4}>Crear Nota</Text>
                 {/* Titulo */}
-                <div className="group">
-                  <input
+                <Box mb={4}>
+                  <Input
                     className="input1"
-                    required
-                    type={"text"}
+                    placeholder="Titulo"
                     name="Title"
                     value={input.Title}
                     onChange={(e) => handleChange(e)}
+                    isRequired
                   />
-                  <span className="bar"></span>
-                  <label className="etiqueta">Titulo</label>
-                  {errors.Title && <p className="peligro">{errors.Title}</p>}
-                </div>
-                {/* fecha */}
-                {/* <div className="group"> */}
-                  {/* controlamos tanto como la fecha y el valor cada vez que haya un cambio */}
-                  {/* <input
-                    className="input1"
-                    type={"Date"}
-                    required
-                    name="Date"
-                    value={input.Date}
-                    onChange={(e) => handleChange(e)}
-                  />
-                  <span className="bar"></span>
-                  <label className="etiqueta"> Fecha de creacion: </label> */}
-                  {/* si hay un error mostramos el valor del objete con ese error */}
-                  {/* {errors.Date && <p className="peligro">{errors.Date}</p>}
-                </div> */}
+                  {errors.Title && <Text color="red.500" mt={2}>{errors.Title}</Text>}
+                </Box>
                 {/* Imagen */}
-                <div className="group">
-                  <input
+                <Box mb={4}>
+                  <Input
                     className="input1"
-                    required
-                    type={"url"}
+                    placeholder="URL de la Imagen"
                     name="Image"
                     value={input.Image}
                     onChange={(e) => handleChange(e)}
+                    isRequired
+                    type="url"
                   />
-                  <span className="bar"></span>
-                  <label className="etiqueta">Url de la Imagen: </label>
-                  {errors.Image && <p className="peligro">{errors.Image}</p>}
-                </div>
-                {/* categorias */}
-                <div className="group">
+                  {errors.Image && <Text color="red.500" mt={2}>{errors.Image}</Text>}
+                </Box>
+                {/* Categorias */}
+                <Box mb={4}>
                   <Select
                     placeholder="Elija las categorias asociadas a la nota creada"
-                    defaultValue={""}
                     onChange={(e) => handleCategories(e)}
-                    className="alert"
+                    isMulti
                   >
-                    {/* me traigo todos mis generos y los muestro */}
                     {categories &&
-                      categories.map((categorie) => {
-                        return (
-                          <option value={categorie.name}>
-                            {categorie.name}
-                          </option>
-                        );
-                      })}
+                      categories.map((categorie) => (
+                        <option key={categorie.name} value={categorie.name}>
+                          {categorie.name}
+                        </option>
+                      ))}
                   </Select>
-                  <span className="bar"></span>
-                  {/* ahora muestro los generos que ha seleccionado el usuario */}
-                  <label className="etiqueta">Categorias: </label>
                   {input.Tags &&
-                    input.Tags.map((tag) => {
-                      return (
-                        <div className="opcion">
-                          <div className="opcion_titulo">{tag}</div>
-                          <button
-                            className="button_delete"
-                            onClick={() => handleDeleteCategory(tag)}
-                            value={tag}
-                            key={tag}
-                          >
-                            <span className={"delete"}>X</span>
-                          </button>
-                        </div>
-                      );
-                    })}
-                </div>
-                {errors.Tags && <p className="peligro">{errors.Tags}</p>}
-                <div className="group">
+                    input.Tags.map((tag) => (
+                      <Box key={tag} display="inline-flex" alignItems="center" mr={2} mb={2}>
+                        <Text>{tag}</Text>
+                        <Button size="xs" colorScheme="red" onClick={() => handleDeleteCategory(tag)} ml={2}>
+                          X
+                        </Button>
+                      </Box>
+                    ))}
+                  {errors.Tags && <Text color="red.500" mt={2}>{errors.Tags}</Text>}
+                </Box>
+                {/* Contenido */}
+                <Box mb={4}>
                   <Textarea
-                    cols="90"
-                    rows="10"
                     placeholder="Escribe aca el contenido de la nota"
-                    requerid
-                    type="text"
                     name="Content"
                     value={input.Content}
                     onChange={(e) => handleChange(e)}
-                  ></Textarea>
-                  <label className="description">Contenido: </label>
-                  {errors.Content && (
-                    <p className="peligro">{errors.Content}</p>
-                  )}
-                </div>
-              </div>
-              <div>
-                <button className="boton_submit">Crear Nota</button>
-              </div>
+                    isRequired
+                  />
+                  {errors.Content && <Text color="red.500" mt={2}>{errors.Content}</Text>}
+                </Box>
+              </Box>
+              <Button type="submit" colorScheme="green">
+                Crear Nota
+              </Button>
             </form>
           </Stack>
-        </>
+        </Box>
       ) : (
         <NotFound />
       )}
-      <Footer />
     </>
   );
 }

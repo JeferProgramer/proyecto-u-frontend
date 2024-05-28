@@ -142,13 +142,13 @@ class ActionProvider {
     }
     handleMatricula = () => {
         const message = this.createChatBotMessage(
-            "En Psicology nos encargamos de revisar que los psicólogos disponibles en el aplicativo tengan verificada y verídica su matricula para darle la mejor experiencia al cliente"
+            "En  EasyPsycho  nos encargamos de revisar que los psicólogos disponibles en el aplicativo tengan verificada y verídica su matricula para darle la mejor experiencia al cliente"
         )
         this.updateChatbotState(message)
     }
     handlePagos = () => {
         const message = this.createChatBotMessage(
-            "En Psicology como metodos de pago tenemos Visa, Mastercard y American Express. De esta forma, con Stripe se optimiza las vías de enrutamiento, proporciona la información más detallada y disminuye la latencia en las transacciones."
+            "En  EasyPsycho  como metodos de pago tenemos Visa, Mastercard y American Express. De esta forma, con Stripe se optimiza las vías de enrutamiento, proporciona la información más detallada y disminuye la latencia en las transacciones."
         )
         this.updateChatbotState(message)
     }

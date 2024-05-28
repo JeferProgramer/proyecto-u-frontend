@@ -61,30 +61,6 @@ function AdminPanelHome() {
                         </Center>
                       </Link>
                     </WrapItem>
-                    <WrapItem>
-                      <Link to='/adminpanel/payments'>
-                        <Center w='20em' h='20em' p='1em' m='1em' bg='blackAlpha.300' _hover={{ bg: 'green.100' }}>
-                          <Stack direction='column' align='center'>
-                            <BsCashCoin size='50%' />
-                            <Text fontSize='2xl' fontWeight='500' color='#2D3748'>
-                              PAGOS
-                            </Text>
-                          </Stack>
-                        </Center>
-                      </Link>
-                    </WrapItem>
-                    <WrapItem>
-                      <Link to='/adminpanel/statistics'>
-                        <Center w='20em' h='20em' p='1em' m='1em' bg='blackAlpha.300' _hover={{ bg: 'green.100' }}>
-                          <Stack direction='column' align='center'>
-                            <BsKanban size='50%' />
-                            <Text fontSize='2xl' fontWeight='500' color='#2D3748'>
-                              ESTADÍSTICAS
-                            </Text>
-                          </Stack>
-                        </Center>
-                      </Link >
-                    </WrapItem>
                   </Wrap>
                 </Stack>
               </Stack>

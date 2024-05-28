@@ -108,16 +108,13 @@ export default function PsychologistDetail() {
                                     <Stack direction='column' width='65%'>
                                       <Text fontSize='4xl' pb='0.5em'>{`${detail.firstName} ${detail.lastName}`}</Text>
                                       <Stack direction='row' width='100%' justify='space-around'>
-                                        <Text fontSize='2xl'>{`📍 ${detail.location}`}</Text>
+                                        {/* <Text fontSize='2xl'>{`📍 ${detail.location}`}</Text> */}
                                         <Text fontSize='2xl'>{`📩 ${detail.email}`}</Text>
                                         <Text fontSize='2xl'>{`🎓 ${detail.education}`}</Text>
                                       </Stack>
                                       <Stack direction='row' width='100%' pt='2em'>
-                                        <Button width='50%' bg='#63caa7' color='white' variant='solid' _hover={[{ color: 'teal' }, { bg: 'green.100' }]} size='lg' onClick={handleCalendar}>
+                                        <Button width='100%' bg='#63caa7' color='white' variant='solid' _hover={[{ color: 'teal' }, { bg: 'green.100' }]} size='lg' onClick={handleCalendar}>
                                           Pedir cita
-                                        </Button>
-                                        <Button width='50%' color='#63caa7' bg='white' borderWidth='0.1em' borderColor='#63caa7' variant='solid' _hover={[{ color: 'teal' }, { bg: 'green.100' }]} size='lg' onClick={() => setShowMap(true)}>
-                                          Ver mapa
                                         </Button>
                                       </Stack>
                                     </Stack>

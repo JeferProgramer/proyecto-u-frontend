@@ -53,11 +53,11 @@ const config = {
         options: [
           {
             text: "Psicologia",
-            url: "https://Psicology.vercel.app/home",
+            url: "https:// EasyPsycho .vercel.app/home",
             id: 1,
           }, {
             text: "Blog de Psicologia",
-            url: "https://Psicology.vercel.app/blog",
+            url: "https:// EasyPsycho .vercel.app/blog",
             id: 3
           }
         ]
@@ -70,11 +70,11 @@ const config = {
         options: [
           {
             text: "Sitio Web",
-            url: "https://Psicology.vercel.app",
+            url: "https:// EasyPsycho .vercel.app",
             id: 1,
           }, {
             text: "Email",
-            url: "mailto:Psicology@gmail.com?Subject=ChatBot Query",
+            url: "mailto: EasyPsycho @gmail.com?Subject=ChatBot Query",
             id: 2
           }
         ]

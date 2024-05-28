@@ -61,7 +61,7 @@ function LandingPage() {
                             bg: 'green.100',
                             zIndex: -1,
                           }}>
-                          Psicology
+                          EasyPsycho
                         </Text>
                         <br />
                         <Text as={'span'} color={'green.300'}>

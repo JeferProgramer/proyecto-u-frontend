@@ -63,7 +63,7 @@ export default function SmallWithLogoLeft() {
         align={{ base: "center", md: "center" }}
       >
         <Image src={img} w={"50px"} />
-        <Text>Psicology. All rights reserved</Text>
+        <Text> EasyPsycho . All rights reserved</Text>
 
         <Stack direction={"row"} spacing={6}>
           <Link href="https://twitter.com/mundopsicologos" isExternal>

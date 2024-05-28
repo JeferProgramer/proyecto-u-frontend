@@ -112,9 +112,6 @@ function RegisterForm() {
             if (!signupForm.location) {
                 errors.location = 'Selecione una localidad'
             }
-            if (signupForm.location && !signupForm.latitude && !signupForm.longitude) {
-                errors.location = 'Selecione una localidad válida'
-            }
         }
         return errors
     }
@@ -407,10 +404,10 @@ function RegisterForm() {
                                                                 }
                                                             </ul>
 
-                                                            <Input name='license' variant='flushed' placeholder=' Matrícula' bg='white' marginTop='2em' onChange={handleInputChange} />
+                                                            <Input name='license' variant='flushed' placeholder=' Matricula de profesional' bg='white' marginTop='2em' onChange={handleInputChange} />
                                                             {formErrors.license && <Text fontSize='sm' color='teal.500'>{formErrors.license}</Text>}
 
-                                                            <Input name='dni' variant='flushed' placeholder=' D.N.I.' bg='white' marginTop='2em' onChange={handleInputChange} />
+                                                            <Input name='dni' variant='flushed' placeholder=' Documento' bg='white' marginTop='2em' onChange={handleInputChange} />
                                                             {formErrors.dni && <Text fontSize='sm' color='teal.500'>{formErrors.dni}</Text>}
 
                                                             <Input name='education' variant='flushed' placeholder=' Educacion' bg='white' marginTop='2em' onChange={handleInputChange} />

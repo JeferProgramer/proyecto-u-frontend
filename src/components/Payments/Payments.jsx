@@ -177,7 +177,7 @@ function Payments() {
                   </Tbody>
                   <Divider />
                 </Table>
-              </TableContainer>Psicology
+              </TableContainer> EasyPsycho
             </Container>
           </>
         ) : <NotFound />}

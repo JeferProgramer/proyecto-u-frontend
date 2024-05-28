@@ -75,7 +75,6 @@ export default function PostsDetail() {
                       </Link>
                     </p>
                     <p className="psytext">Fecha: {postDate.getUTCFullYear()}-{postDate.getUTCMonth()}-{postDate.getUTCDate()}</p>
-                    <p className="psytext">{post.idUserPsychologist.location}</p>
                   </Stack>
                 </div>
               ) : null}

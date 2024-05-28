@@ -130,7 +130,7 @@ export default function ForgotPassword() {
                 className="input_calificacion"
                 name="email"
                 onChange={(e) => handleInputChange(e)}
-                placeholder="Ej: Psicology@gmail.com"
+                placeholder="Ej:  EasyPsycho @gmail.com"
               />
               {errorsEmail && (
                 <Text fontWeight={"semibold"} color={"#285e61"}>{`${errorsEmail.email ? `>${errorsEmail.email}` : ""

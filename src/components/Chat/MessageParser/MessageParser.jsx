@@ -19,7 +19,7 @@ class MessageParser {
         else if (lowerCaseMessage.includes("menu") || lowerCaseMessage.includes("volver")) {
             this.actionProvider.handleMenu()
         }
-        else if (lowerCaseMessage.includes("contactanos") || lowerCaseMessage.includes("contacto") || lowerCaseMessage.includes("Psicology") || lowerCaseMessage.includes("email")) {
+        else if (lowerCaseMessage.includes("contactanos") || lowerCaseMessage.includes("contacto") || lowerCaseMessage.includes(" EasyPsycho ") || lowerCaseMessage.includes("email")) {
             this.actionProvider.handleHire();
         }
         else if (lowerCaseMessage.includes("cool") || lowerCaseMessage.includes("impresionante") ||
