@@ -831,7 +831,7 @@ export function createAppointmentAsClient(IdUserPsychologist, appointmentData) {
           confirmButtonColor: '#38B2AC',
           closeOnConfirm: true
         }).then(function () {
-          window.location = `http://localhost:3002/checkout/${IdUserPsychologist}`
+          window.location = `https://proyecto-u-frontend.vercel.app/home/${IdUserPsychologist}`
         })
       }
     } catch (error) {
