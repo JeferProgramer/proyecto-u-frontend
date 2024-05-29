@@ -1,5 +1,4 @@
-// export const LOCAL_HOST = "http://localhost:3001"
-export const LOCAL_HOST = "http://localhost:3001"
+export const LOCAL_HOST = "https://web-production-1ff4.up.railway.app"
 
 export const GET_ALL_USERCLIENTS = 'GET_ALL_USERCLIENTS';
 export const GET_USERCLIENT = 'GET_USERCLIENT';
