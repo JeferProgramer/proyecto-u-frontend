@@ -53,11 +53,11 @@ const config = {
         options: [
           {
             text: "Psicologia",
-            url: "https:// EasyPsycho .vercel.app/home",
+            url: "https://proyecto-u-frontend.vercel.app/home",
             id: 1,
           }, {
             text: "Blog de Psicologia",
-            url: "https:// EasyPsycho .vercel.app/blog",
+            url: "https://proyecto-u-frontend.vercel.app/blog",
             id: 3
           }
         ]
@@ -70,7 +70,7 @@ const config = {
         options: [
           {
             text: "Sitio Web",
-            url: "https:// EasyPsycho .vercel.app",
+            url: "https://proyecto-u-frontend.vercel.app",
             id: 1,
           }, {
             text: "Email",
